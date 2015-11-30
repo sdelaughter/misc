@@ -29,7 +29,7 @@ try:
     MAX = 100
 except:
   print('Invalid command-line arguments.  Supply one integer argument to test a single number, or two integers to test a range of numbers')
-  sys.exti()
+  sys.exit()
   
 def test(number):
 	n = number
