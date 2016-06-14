@@ -4,6 +4,7 @@
 This program graphs the probability of landing on each integer in a given interval for a 1D random-walk simulation
 If called with a -i flag, it will prompt for user input on the following variables:
 	Boundary numbers, starting position, number of steps per simulation, number of simulations
+	
 """
 
 import sys
