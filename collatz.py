@@ -39,7 +39,7 @@ def test(number):
     else:
       n = ((n * 3) + 1)
       counter += 1
-      print ('Reached 1 from ' + str(number) + ' in ' + str(counter) +  ' steps')
+  print ('Reached 1 from ' + str(number) + ' in ' + str(counter) +  ' steps')
 
 def main():
   number = MIN
