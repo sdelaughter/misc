@@ -46,7 +46,7 @@ def main():
   while number <= MAX:
     test(number)
     number += 1
-    print('Done')
+  print('Done')
 
 if __name__ == '__main__':
   main()
