@@ -1,6 +1,5 @@
 """
 Calendar Fact Generator
-
 Based on XKCD #1930
 https://xkcd.com/1930/
 
@@ -8,9 +7,8 @@ Author: Samuel DeLaughter
 License: MIT
 Last Updated: 12/18/2017
 
-
-Accepts an optional integer command line argument to generate multiple facts at once.
-
+Accepts an optional integer command line argument to generate a set number of facts.
+Otherwise it will continue to generate them until you tell it to stop.
 """
 
 import random
@@ -68,6 +66,7 @@ def build_options():
 
     return g
 
+
 def get_fact(g):
     g0 = random.choice(g[0])
     g1 = random.choice(g[1])
@@ -75,16 +74,26 @@ def get_fact(g):
     g3 = random.choice(g[3])
     fact = 'Did you know that {} {} because of {}?  Apparently {}.'.format(g0, g1, g2, g3)
     return(fact)
+
     
 def main():
     g = build_options()
-    try:
-        n = max(1, int(sys.argv[1]))
-    except:
-        n = 1
-    for i in range(n):
-        print(get_fact(g))
-        print('\n')
+    
+    if len(sys.argv) > 1:
+        for i in range(max(1, int(sys.argv[1]))):
+            print(get_fact(g))
+            print('\n')
+    
+    else:
+        another = True
+        while another:
+            print('\n')
+            print(get_fact(g))
+            print('\n')
+            c = raw_input("Want another calendar fact? (Y/n)\n")
+            if c.upper() in ['N', 'NO', 'Q', 'QUIT']:
+                another = False
+    
     
 if __name__ == "__main__": 
     main()
