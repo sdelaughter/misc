@@ -11,6 +11,7 @@ Accepts an optional integer command line argument to generate a set number of fa
 Otherwise it will continue to generate them until you tell it to stop.
 """
 
+
 import random
 import sys
 
@@ -45,6 +46,7 @@ def build_options():
         g[1].append('drifts out of sync with the {}'.format(i))
     for i in ['not happen', 'happen twice']:
         g[1].append('might {} this year'.format(i))    
+    
     for i in ['Indiana', 'Arizona', 'Russia']:
         g[2].append('Time Zone legislation in {}'.format(i))
     g[2].append('a decree by the Pope in the 1500s')
